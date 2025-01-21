@@ -62,8 +62,7 @@ class UserResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                    Tables\Columns\TextColumn::make('roles.name')
-                    ->searchable(),
+                   
             ])
             ->filters([
                 //
@@ -75,7 +74,7 @@ class UserResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ]);     
     }
 
     public static function getRelations(): array
